@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:3000
+### Read all films
+GET {{baseUrl}}/films
+
+### Read all film above minimum duration
+GET {{baseUrl}}/films?minimum-duration=2
+
+### Read all film above minimum duration (negative bumber)
+GET {{baseUrl}}/films?minimum-duration=-2
+
+### GET THE FILM
+GET {{baseUrl}}/films/2
+
+### Create a film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title": "jhfds",
+    "duration": 50,
+    "budget": 150008,
+    "link": "fdgjdskjfh"
+}
+
+### Create existing film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title": "titre2",
+    "duration": 50,
+    "budget": 150008,
+    "link": "fdgjdskjfh"
+}
+
+### DELETE a film
+DELETE {{baseUrl}}/films/2
+
+### PATCH film id 1
+PATCH {{baseUrl}}/films/1
+Content-Type: application/json
+
+{
+    "budget": 15000000000
+}
+
+### PUT inexisting id 6
+PUT {{baseUrl}}/films/6
+Content-Type: application/json
+
+{
+    "title": "titre6",
+    "duration": 90,
+    "budget": 5000000,
+    "link": "link6"
+}
+
+### PUT existing id 6
+PUT {{baseUrl}}/films/6
+Content-Type: application/json
+
+{
+    "title": "titre6.2",
+    "duration": 60,
+    "budget": 56000000,
+    "link": "link6.2"
+}
