@@ -62,6 +62,6 @@ Content-Type: application/json
 {
     "title": "titre6.2",
     "duration": 60,
-    "budget": 56000000,
+    "budget": 6005000,
     "link": "link6.2"
 }

@@ -150,11 +150,6 @@ router.put('/:id', (req, res) => {
 
     if(!title || !duration || !budget || !link)return res.sendStatus(400);
 
-    let foundId = undefined; 
-  
-    for(let i = 0; i < films.length; i++){
-        if(films[i]?.id == id)foundId = i;
-    }
     const film = {
         id: id,
         title: title,
@@ -162,6 +157,13 @@ router.put('/:id', (req, res) => {
         budget: budget,
         link: link,
     };
+
+
+    let foundId = undefined; 
+  
+    for(let i = 0; i < films.length; i++){
+        if(films[i]?.id == id)foundId = i;
+    }
 
     if(foundId === undefined){  
         films.push(film);
