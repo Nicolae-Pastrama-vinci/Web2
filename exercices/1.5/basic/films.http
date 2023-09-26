@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000
+### Read all films
+GET {{baseUrl}}/films
+
+### Read all film above minimum duration
+GET {{baseUrl}}/films?minimum-duration=2
+
+### GET THE FILM
+GET {{baseUrl}}/films/2
+
+### Create a film
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title": "jhfds",
+    "duration": 50,
+    "budget": 150008,
+    "link": "fdgjdskjfh"
+}
+
+### Create existing film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title": "titre2",
+    "duration": 50,
+    "budget": 150008,
+    "link": "fdgjdskjfh"
+}
+
