@@ -5,6 +5,9 @@ GET {{baseUrl}}/films
 ### Read all film above minimum duration
 GET {{baseUrl}}/films?minimum-duration=2
 
+### Read all film above minimum duration (negative bumber)
+GET {{baseUrl}}/films?minimum-duration=-2
+
 ### GET THE FILM
 GET {{baseUrl}}/films/2
 
