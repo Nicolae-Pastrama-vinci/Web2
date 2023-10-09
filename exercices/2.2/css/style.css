@@ -1,0 +1,12 @@
+body{
+    background-color: aliceblue;
+}
+
+#compteur{
+    align-self: center;
+    user-select: none;
+}
+#message{
+    align-items: center;
+    user-select: none;
+}
