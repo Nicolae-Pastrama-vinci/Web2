@@ -42,6 +42,7 @@ router.get('/', (req, res) => {
 
     const filmsTrie = [];
 
+    // eslint-disable-next-line no-restricted-syntax
     for(const film of f){
         if(film.duration >= minimum){
             filmsTrie.push(film);
@@ -80,6 +81,7 @@ router.post('/', (req, res) => {
     const nextId = lastId + 1;
     
 
+    // eslint-disable-next-line no-restricted-syntax
     for(const film0 of films){
         if(film0.title === title)return res.sendStatus(409);
     };
@@ -119,7 +121,7 @@ router.delete('/:id', (req, res) => {
 
     serialize(jsonDbPath, f);
   
-    res.json(itemRemoved);
+    return res.json(itemRemoved);
   });
 
 router.patch('/:id', (req, res) => {
@@ -149,7 +151,7 @@ router.patch('/:id', (req, res) => {
 
     serialize(jsonDbPath, f);
 
-    res.json(modifiedFilm);
+    return res.json(modifiedFilm);
 
 });
 
